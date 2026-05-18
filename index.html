@@ -184,11 +184,212 @@
   .dresscode-img:hover {
     transform: translateY(-5px);
   }
+  .gifts-section {
+    padding: 80px 20px;
+    background-color: #ffffff; /* Или #fafafa, если у вас кремовый фон */
+    font-family: 'Playfair Display', 'Georgia', serif; /* Свадебный благородный шрифт */
+}
+
+.wedding-container {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Заголовок */
+.section-title {
+    font-size: 2.2rem;
+    font-weight: 300;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+    color: #2c2c2c;
+    text-transform: uppercase;
+}
+
+/* Описание */
+.wishes-description {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #666666;
+    margin-bottom: 40px;
+    font-family: 'Montserrat', 'Arial', sans-serif; /* Чистый шрифт для чтения */
+}
+
+/* Флекс-контейнер для строгого порядка кнопок */
+.action-buttons-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Для адаптивности на мобильных */
+}
+
+/* Базовый стиль свадебной кнопки */
+.wedding-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 28px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 50px;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    box-sizing: border-box;
+    min-width: 200px; /* Чтобы кнопки были одинакового эстетичного размера */
+}
+
+.gifts-section {
+    padding: 80px 20px;
+    background-color: #ffffff; /* Или #fafafa, если у вас кремовый фон */
+    font-family: 'Playfair Display', 'Georgia', serif; /* Свадебный благородный шрифт */
+}
+
+.wedding-container {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Заголовок */
+.section-title {
+    font-size: 2.2rem;
+    font-weight: 300;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+    color: #2c2c2c;
+    text-transform: uppercase;
+}
+
+/* Описание */
+.wishes-description {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #666666;
+    margin-bottom: 40px;
+    font-family: 'Montserrat', 'Arial', sans-serif; /* Чистый шрифт для чтения */
+}
+
+/* Флекс-контейнер для строгого порядка кнопок */
+.action-buttons-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Для адаптивности на мобильных */
+}
+
+/* Базовый стиль свадебной кнопки */
+.wedding-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 28px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 50px;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    box-sizing: border-box;
+    min-width: 200px; /* Чтобы кнопки были одинакового эстетичного размера */
+}
+
+.btn-icon {
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+/* Дизайн кнопок: Тонкий стиль (Контурные и залитые) */
+
+/* 1. Позвонить Вере  */
+.btn-call {
+    background-color: #2c2c2c;
+    color: #ffffff;
+    border: 1px solid #2c2c2c;
+}
+
+.btn-call:hover {
+    background-color: #444444;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* 2. Telegram Веры —  */
+.btn-vera {
+    background-color: transparent;
+    color: #2c2c2c;
+    border: 1px solid #bcbcbc;
+}
+
+.btn-vera:hover {
+    background-color: #f7f7f7;
+    border-color: #2c2c2c;
+    transform: translateY(-3px);
+}
+
+/* 3. max */
+.btn-max {
+    background-color: transparent;
+    color: #2c2c2c;
+    border: 1px solid #bcbcbc;
+}
+
+.btn-max:hover {
+    background-color: #f7f7f7;
+    border-color: #2c2c2c;
+    transform: translateY(-3px);
+}
+
+/* Мобильная адаптация: на экранах меньше 600px кнопки встанут в аккуратный столбик */
+@media (max-width: 600px) {
+    .action-buttons-group {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .wedding-btn {
+        width: 100%; /* Кнопки растянутся по ширине экрана смартфона */
+        max-width: 320px;
+    }
+}
+header, 
+section, 
+.hero-section, 
+.gifts-section, 
+.wishes-content, 
+div[class*="-section"],
+div[class*="-content"] {
+    background-color: transparent !important;
+    background: transparent !important;
+}
+/* Элегантный градиентный разделитель */
+.wedding-divider {
+    border: 0;                  /* Убираем стандартную грубую рамку */
+    height: 1px;                /* Делаем линию очень тонкой и нежной */
+    max-width: 60%;             /* Линия не будет растягиваться на весь экран, а займет аккуратный центр */
+    margin: 40px auto;          /* Делаем красивые отступы сверху и снизу от блоков */
+    
+    /* Магия градиента: прозрачный на краях, благородный серо-зеленый в центре */
+    background-image: linear-gradient(to right, transparent, rgba(197, 160, 89, 0.6) 50%, rgba(197, 160, 89, 0.6) 30%, transparent); 
+}
+
+/* На мобильных телефонах делаем линию чуть шире, чтобы она смотрелась пропорционально */
+@media (max-width: 480px) {
+    .wedding-divider {
+        max-width: 80%;
+        margin: 30px auto;
+    }
+}
+
 </style>
     </style>
 </head>
-<body>
-
+<body style="background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url('bg.jpg'); background-size: cover; background-position: center; background-attachment: fixed; background-repeat: no-repeat; margin: 0; padding: 0;">
     <section class="main-screen" style="padding: 0;">
         <h1 class="names">Сергей & Виктория</h1>
         <div class="timer-container">
@@ -219,6 +420,7 @@
     <p class="invitation-footer">Будем очень рады, если вы станете частью нашей истории!</p>
   </div>
 </section>
+<hr class="wedding-divider">
     <section class="timeline-section">
         <h2 class="section-title">Программа дня</h2>
         <div class="timeline">
@@ -228,7 +430,7 @@
             <div class="timeline-item"><div class="time">23:00</div><div class="event-desc"><h3>Финал вечера</h3><p>Время сказать друг другу самое важное и сохранить этот вечер в памяти навсегда.</p></div></div>
         </div>
     </section>
-
+<hr class="wedding-divider">
    <section class="dress-code">
     <h2 class="section-title">Дресс-код</h2>
     
@@ -269,7 +471,7 @@
     </div>
 
 <section class="location-section" style="max-width: 800px; margin: 50px auto; padding: 20px; text-align: center; box-sizing: border-box;"> 
-    
+    <hr class="wedding-divider">
     <h2 class="section-title">Где всё будет</h2> 
     
     <div class="location-info" style="margin-bottom: 25px;"> 
@@ -286,6 +488,7 @@
      <div class="map-link-container"> <a href="https://yandex.ru/maps/org/kedr/129603672024/?ll=37.171064%2C55.610647&z=16" target="_blank" class="map-button"> Открыть маршрут в Яндекс.Картах </a> </div>
 
 </section>
+<hr class="wedding-divider">
   <section class="gifts-section">
   <h2 class="section-title">Наши пожелания</h2>
    <div class="wishes-content">
@@ -304,6 +507,7 @@
                 <p>Будем очень признательны, если Вы воздержитесь от криков горько. Ведь поцелуй — это знак выражения чувств и он не может быть по заказу.</p>
             </div>
         </div>
+        <hr class="wedding-divider">
      <!--АНКЕТА -->
   <section class="wedding-survey" style="clear: both; display: block; width: 100%; max-width: 800px; margin: 40px auto; padding: 15px; box-sizing: border-box; text-align: center;">
     
@@ -323,7 +527,37 @@
         <iframe src="https://forms.yandex.ru/u/6a0588ec49af474758154b97?iframe=1" frameborder="0" name="ya-form-6a0588ec49af474758154b97" style="display: block; border: none; background: transparent; width: 100%; min-width: 100%;" height="700"></iframe>
         
     </div>
-
+</section>
+<hr class="wedding-divider">
+<section class="gifts-section">
+    <div class="wedding-container">
+        <h2 class="section-title">СЮРПРИЗЫ</h2>
+        
+        <p class="wishes-description">
+            Если у вас есть идея для творческого сюрприза или необычного подарка, свяжитесь, пожалуйста, с нашим организатором Верой, также ей можно адресовать вопросы, которые касаются трансфера и проживания.:
+        </p>
+        
+        <!-- Элегантный ряд кнопок -->
+        <div class="action-buttons-group">
+            
+            <!-- 1. Кнопка для звонка -->
+            <a href="tel:+79200966068" class="wedding-btn btn-call">
+                <span class="btn-icon">📞</span> Позвонить Вере
+            </a>
+            
+            <!-- 2. Telegram Веры -->
+            <a href="https://t.me/saltwedding" class="wedding-btn btn-vera" target="_blank">
+                <span class="btn-icon">💬</span> Написать в Telegram
+            </a>
+            
+            <!-- 3. Кнопка для Макса -->
+            <a href="https://max.ru/u/f9LHodD0cOIZAJL30CM6VksnYYp-2sihD-ZFuDvvBzWl3hJUUu-ZpZjg6g8" class="wedding-btn btn-max" target="_blank">
+                <span class="btn-icon">🐌</span> Написать в MAX
+            </a>
+            
+        </div>
+    </div>
+</section>
 </section>
 
     <script>
