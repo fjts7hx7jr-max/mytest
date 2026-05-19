@@ -11,20 +11,24 @@
 
         /* 1. Главный экран */
         .main-screen {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                        url('./wedding.jpg') center/cover no-repeat !important;
-            background-attachment: fixed;
-        }
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('./wedding.jpg') center/cover no-repeat !important;
+    background-attachment: fixed;
+}
 
-        .names { font-family: 'Great Vibes', cursive; font-size: clamp(50px, 12vw, 110px); margin: 0; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
-        .date { font-size: 24px; letter-spacing: 6px; margin-top: 15px; text-transform: uppercase; }
+/* Фикс для мобильных устройств: отключаем фиксацию, возвращаем четкость */
+@media (max-width: 1024px) {
+    .main-screen {
+        background-attachment: scroll !important;
+    }
+}
 
         /* Таймер */
         .timer-container { margin-top: 45px; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); padding: 30px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.3); }
