@@ -391,20 +391,12 @@ html {
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    min-height: 100%;
-    font-family: 'Cormorant Garamond', serif;
-    
-    /* Наложение полупрозрачного белого цвета и текстуры */
     background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url('bg.jpg');
-    
-    /* ВАЖНО: Отключаем cover и включаем авто-размер */
-    background-size: auto !important; 
-    
-    /* Включаем бесконечное повторение плитки */
-    background-repeat: repeat !important;
-    background-position: top left;
+    background-position: center top;
+    background-repeat: no-repeat;
+    /* Картинка всегда растягивается строго по ширине экрана, а вниз уходит в цвет фона */
+    background-size: 100% auto !important; 
+    background-color: #f9f6f2; 
 }
 
 /* Красивый эффект параллакса (зафиксированный фон bg.jpg) оставляем ТОЛЬКО на компьютерах */
