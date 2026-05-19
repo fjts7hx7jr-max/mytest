@@ -20,13 +20,12 @@
     color: white;
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
                 url('./wedding.jpg') center/cover no-repeat !important;
-    background-attachment: fixed;
 }
 
-/* Фикс для мобильных устройств: отключаем фиксацию, возвращаем четкость */
-@media (max-width: 1024px) {
+/* Включаем красивый эффект фиксации ТОЛЬКО для компьютеров и больших экранов */
+@media (min-width: 1025px) {
     .main-screen {
-        background-attachment: scroll !important;
+        background-attachment: fixed;
     }
 }
 
