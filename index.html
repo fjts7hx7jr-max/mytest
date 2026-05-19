@@ -395,13 +395,16 @@ body {
     padding: 0;
     min-height: 100%;
     font-family: 'Cormorant Garamond', serif;
-    /* Наш красивый фон bg.jpg */
+    
+    /* Наложение полупрозрачного белого цвета и текстуры */
     background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url('bg.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    /* По умолчанию для мобильных — обычный скролл фона, БЕЗ fixed */
-    background-attachment: scroll; 
+    
+    /* ВАЖНО: Отключаем cover и включаем авто-размер */
+    background-size: auto !important; 
+    
+    /* Включаем бесконечное повторение плитки */
+    background-repeat: repeat !important;
+    background-position: top left;
 }
 
 /* Красивый эффект параллакса (зафиксированный фон bg.jpg) оставляем ТОЛЬКО на компьютерах */
