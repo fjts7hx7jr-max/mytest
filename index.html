@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <link rel="preload" as="image" href="./bg.jpg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Свадьба Сергея и Виктории</title>
@@ -11,24 +12,21 @@
 
         /* 1. Главный экран */
         .main-screen {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                url('./wedding.jpg') center/cover no-repeat !important;
-    background-attachment: fixed;
-}
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('./wedding.jpg') center/cover no-repeat !important;
+            background-attachment: fixed;
+        }
 
-/* Фикс для мобильных устройств: отключаем фиксацию, возвращаем четкость */
-@media (max-width: 1024px) {
-    .main-screen {
-        background-attachment: scroll !important;
-    }
-}
+        .names { font-family: 'Great Vibes', cursive; font-size: clamp(50px, 12vw, 110px); margin: 0; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
+        .date { font-size: 24px; letter-spacing: 6px; margin-top: 15px; text-transform: uppercase; }
+
         /* Таймер */
         .timer-container { margin-top: 45px; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); padding: 30px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.3); }
         #timer { display: flex; gap: 25px; }
@@ -388,35 +386,35 @@ div[class*="-content"] {
         margin: 30px auto;
     }
 }
-#preloader {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background-color: #f9f6f2;
-    z-index: 9999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-    transition: opacity 0.5s ease;
+html {
+    scroll-behavior: smooth;
 }
-.loader-heart {
-    animation: heartbeat 1.2s infinite;
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    font-family: 'Cormorant Garamond', serif;
+    /* Наш красивый фон bg.jpg */
+    background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url('bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* По умолчанию для мобильных — обычный скролл фона, БЕЗ fixed */
+    background-attachment: scroll; 
 }
-@keyframes heartbeat {
-    0% { transform: scale(1); }
-    20% { transform: scale(1.2); }
-    40% { transform: scale(1); }
+
+/* Красивый эффект параллакса (зафиксированный фон bg.jpg) оставляем ТОЛЬКО на компьютерах */
+@media (min-width: 1025px) {
+    body {
+        background-attachment: fixed;
+    }
 }
 </style>
     </style>
 </head>
-<div id="preloader">
-    <div class="loader-heart">❤️ Загрузка...</div>
-</div>
+<body>
 <body style="background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url('bg.jpg'); background-size: cover; background-position: center; background-attachment: fixed; background-repeat: no-repeat; margin: 0; padding: 0;">
-  
-</div>
     <section class="main-screen" style="padding: 0;">
         <h1 class="names">Сергей & Виктория</h1>
         <div class="timer-container">
@@ -601,12 +599,3 @@ div[class*="-content"] {
         setInterval(updateTimer, 1000);
         updateTimer();
     </script>
-    <script>
-    window.addEventListener('load', function() {
-        const preloader = document.getElementById('preloader');
-        preloader.style.opacity = '0';
-        setTimeout(() => {
-            preloader.style.display = 'none';
-        }, 500);
-    });
-</script>
