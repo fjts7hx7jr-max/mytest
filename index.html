@@ -27,10 +27,10 @@
       .names { 
     font-family: 'Georgia', 'Palatino Linotype', 'Book Antiqua', serif; 
     font-style: italic; 
-    font-size: clamp(45px, 10vw, 90px); /* шаг */
+    font-size: clamp(45px, 10vw, 90px); 
     font-weight: normal; 
     margin: 0; 
-    line-height: 1.2; /*  отступ между строками*/
+    line-height: 1.2; 
     
     /* ЦВЕТ:  */
     color: #e6dfd3; 
@@ -51,31 +51,28 @@
         .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(26px, 5vw, 36px); color: #2c2c2c; margin-bottom: 60px; text-transform: uppercase; letter-spacing: 6px; display: flex; align-items: center; justify-content: center; gap: 15px; }
         .section-title::before, .section-title::after { content: ''; width: 8px; height: 8px; background: #d2b48c; transform: rotate(45deg); opacity: 0.6; }
 <style>
-  /* ======================================================= */
-  /*  НАСТРОЙКА ШРИФТА И ЦВЕТА (МЕНЯЙ ТУТ)                   */
-  /* ======================================================= */
+  
  .modern-invite {
-    /* Чистый, ультрасовременный системный шрифт */
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     
-    font-size: clamp(14px, 3.5vw, 17px); /* Сделали шрифт чуть аккуратнее и компактнее */
-    font-weight: 300; /* Делаем буквы тонкими и изящными */
-    line-height: 2; /* Увеличили воздух между строками для лёгкости */
-    color: #222222; /* Строгий графитово-чёрный */
+    font-size: clamp(14px, 3.5vw, 17px); 
+    font-weight: 300; 
+    line-height: 2; 
+    color: #222222; 
     max-width: 600px;
     margin: 70px auto;
     padding: 0 25px;
     
-    /* ВОТ ЭТИ ДВЕ СТРОЧКИ ДЕЛАЮТ СТИЛЬ: */
-    text-transform: uppercase; /* Все буквы автоматически становятся заглавными */
-    letter-spacing: 2px; /* Элегантное расстояние между буквами, как в титрах кино */
+    
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
 }
 
-/* Настройка для даты внутри этого текста */
+
 .accent-date {
-    font-weight: 600; /* Делаем дату чуть плотнее, чтобы она выделялась */
+    font-weight: 600; 
     color: #000000;
-    border-bottom: 1px solid #222222; /* Аккуратное строгое подчеркивание */
+    border-bottom: 1px solid #222222; 
 }
         /* Таймлайн */
         .timeline { 
@@ -92,7 +89,7 @@
     position: relative; 
 }
 
-/* Твои красивые элегантные полосочки-разделители между пунктами */
+/* полосочки-разделители между пунктами */
 .timeline-item::after { 
     content: ''; 
     display: block; 
@@ -107,39 +104,39 @@
     margin-bottom: 0;
 }
 
-/* ВРЕМЯ (Твой цвет #a89177, но сделали буквы крупнее и тоньше для стиля) */
+/* ВРЕМЯ ТАЙМЛАЙН*/
 .time { 
     font-family: 'Cormorant Garamond', 'Georgia', serif;
-    font-size: clamp(28px, 6vw, 36px); /* Сделали его благородным и крупным */
+    font-size: clamp(28px, 6vw, 36px); 
     letter-spacing: 2px; 
-    color: #a89177; /* Твой родной цвет времени */
+    color: #a89177; 
     text-transform: uppercase; 
-    font-weight: 300; /* Легкое, утонченное начертание цифр */
+    font-weight: 300; 
 }
 
-/* ПОДЗАГОЛОВОК (Сбор гостей, Свадебный ужин) — строгий, заглавный, без засечек */
+/* ПОДЗАГОЛОВОК (Сбор гостей, Свадебный ужин)  */
 .event-desc h3 { 
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
     margin: 10px 0 0; 
-    font-size: clamp(14px, 3.5vw, 16px); /* Аккуратный журнальный размер */
-    font-weight: 600; /* Плотный акцент */
-    text-transform: uppercase; /* Все буквы заглавные */
-    letter-spacing: 2px; /* Воздух между буквами */
+    font-size: clamp(14px, 3.5vw, 16px); 
+    font-weight: 600; 
+    text-transform: uppercase; 
+    letter-spacing: 2px;
     color: #333; 
 }
 
-/* ОПИСАНИЕ (Приветственные напитки...) — полностью как было у тебя, уютным курсивом */
+/* ОПИСАНИЕ (Приветственные напитки...) */
 .event-desc p { 
     font-family: 'Cormorant Garamond', 'Georgia', serif;
     margin: 10px auto 0; 
     color: #888; 
-    font-style: italic; /* Твой любимый изящный курсив */
-    font-size: clamp(16px, 4vw, 19px); /* Идеальный размер, как в пожеланиях */
+    font-style: italic; 
+    font-size: clamp(16px, 4vw, 19px); 
     line-height: 1.5;
-    max-width: 450px; /* Чтобы текст красиво ложился в 2-3 строчки */
+    max-width: 450px; 
 }
 
-/* Твой блок дресс-кода ниже оставляем без изменений */
+/*  блок дресс-кода */
 .palette { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
 .color-circle { width: 55px; height: 55px; border-radius: 50%; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.4s ease; cursor: pointer; }
 .color-circle:hover { transform: scale(1.2); }
@@ -147,41 +144,28 @@
         /* Пожелания */
         .wishes-content { max-width: 650px; margin: 0 auto; text-align: center; }
         .wish-item { margin-bottom: 60px; }
-        .wish-item p { font-size: 21px; color: #666; font-style: italic; line-height: 1.7; margin: 0; }
+        .wish-item p { font-family: 'Cormorant Garamond', 'Georgia', serif;
+    margin: 10px auto 0; 
+    color: #888; 
+    font-style: italic; 
+    font-size: clamp(16px, 4vw, 19px); 
+    line-height: 1.5;
+    max-width: 450px; }
         .sub-title {
-    font-family: "Твой Шрифт", serif; /* Название нужного шрифта */
-    font-size: 24px;                /* Размер текста */
-    font-weight: bold;              /* Жирность */
-    color: #333;                    /* Цвет текста */
-    display: block;                 /* Чтобы заголовок был над текстом */
-    margin-bottom: 10px;            /* Отступ до текста */
-    text-transform: uppercase;      /* Сделать все буквы заглавными (по желанию) */
+    font-family: "Твой Шрифт", serif;
+    font-size: 20px;               
+    font-weight: bold;              
+    color: #333;                    
+    display: block;                 
+    margin-bottom: 10px;            
+    text-transform: uppercase;     
 }
 
-       /* Анкета RSVP (Опросник) */
-        .rsvp-form { max-width: 500px; margin: 0 auto; text-align: left; background: rgba(255,255,255,0.7); padding: 40px 30px; border-radius: 25px; border: 1px solid rgba(210, 180, 140, 0.4); box-shadow: 0 15px 35px rgba(0,0,0,0.05); }
-        .form-group { margin-bottom: 30px; }
-        .form-group label { display: block; font-size: 22px; margin-bottom: 15px; color: #333; font-weight: 400; }
-        .input-text { width: 100%; padding: 12px; border: none; border-bottom: 1px solid #d2b48c; background: transparent; font-family: 'Cormorant Garamond', serif; font-size: 19px; outline: none; box-sizing: border-box; }
-        .options-list { display: flex; flex-direction: column; gap: 12px; }
-        .option-item { display: flex; align-items: center; gap: 10px; font-size: 19px; cursor: pointer; color: #555; }
-        .option-item input { width: 18px; height: 18px; accent-color: #d2b48c; cursor: pointer; }
-        .btn-submit { display: block; width: 100%; padding: 18px; background-color: #d2b48c; color: white; border: none; border-radius: 35px; font-size: 14px; letter-spacing: 3px; text-transform: uppercase; cursor: pointer; transition: 0.3s; font-family: 'Cormorant Garamond', serif; font-weight: 600; margin-top: 20px; }
-        .btn-submit:hover { background-color: #a89177; transform: translateY(-2px); }
-
-        /* Карта и Подарки */
-        .location-info h3 { font-size: 32px; font-weight: 400; color: #333; }
-        .btn-map { display: inline-block; padding: 16px 40px; background-color: #d2b48c; color: white; text-decoration: none; border-radius: 30px; font-size: 14px; letter-spacing: 3px; text-transform: uppercase; transition: 0.3s; margin-top: 20px; }
-        .gifts-text { font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #666; font-style: italic; line-height: 1.6; }
-        .map-link-container {
-    margin-top: 20px;
-    text-align: center;
-}
 
 .map-button {
     display: inline-block;
     padding: 12px 25px;
-    background-color: #666; /* Цвет под твой текст */
+    background-color: #666; /* Цвет кнопки */
     color: #fff !important; /* Цвет текста кнопки */
     text-decoration: none;
     border-radius: 30px;
@@ -197,64 +181,36 @@
     margin-top: 40px;
     width: 100%;
     text-align: center;
-    /* Если нужно, чтобы под прозрачным фото был ровно такой же фон, как у сайта */
     background-color: transparent; 
   }
   
   .dresscode-img {
     width: 100%;
-    max-width: 500px; /* Ограничили ширину, чтобы на ПК фото не было гигантским */
+    max-width: 500px; 
     height: auto;
     display: inline-block;
     
-    /* Эффект мягкого свечения, чтобы вырезанные силуэты одежды красиво отделялись от темного фона */
+   
     filter: drop-shadow(0px 10px 20px rgba(255, 255, 255, 0.05)); 
     
-    /* Плавное появление при загрузке */
+   
     transition: transform 0.3s ease;
   }
 
-  /* Легкий интерактив: при наведении мышки фото чуть-чуть приподнимается */
+  
   .dresscode-img:hover {
     transform: translateY(-5px);
   }
   .gifts-section {
     padding: 80px 20px;
-    background-color: #ffffff; /* Или #fafafa, если у вас кремовый фон */
-    font-family: 'Playfair Display', 'Georgia', serif; /* Свадебный благородный шрифт */
+    background-color: #ffffff; 
+    font-family: 'Playfair Display', 'Georgia', serif; 
 }
 
 .wedding-container {
     max-width: 700px;
     margin: 0 auto;
     text-align: center;
-}
-
-/* Заголовок */
-.section-title {
-    font-size: 2.2rem;
-    font-weight: 300;
-    letter-spacing: 4px;
-    margin-bottom: 25px;
-    color: #2c2c2c;
-    text-transform: uppercase;
-}
-
-/* Описание */
-.wishes-description {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    color: #666666;
-    margin-bottom: 40px;
-    font-family: 'Montserrat', 'Arial', sans-serif; /* Чистый шрифт для чтения */
-}
-
-/* Флекс-контейнер для строгого порядка кнопок */
-.action-buttons-group {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap; /* Для адаптивности на мобильных */
 }
 
 /* Базовый стиль свадебной кнопки */
@@ -272,13 +228,13 @@
     border-radius: 50px;
     transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
     box-sizing: border-box;
-    min-width: 200px; /* Чтобы кнопки были одинакового эстетичного размера */
+    min-width: 200px; 
 }
 
 .gifts-section {
     padding: 80px 20px;
-    background-color: #ffffff; /* Или #fafafa, если у вас кремовый фон */
-    font-family: 'Playfair Display', 'Georgia', serif; /* Свадебный благородный шрифт */
+    background-color: #ffffff; 
+    font-family: 'Playfair Display', 'Georgia', serif; 
 }
 
 .wedding-container {
@@ -303,7 +259,7 @@
     line-height: 1.7;
     color: #666666;
     margin-bottom: 40px;
-    font-family: 'Montserrat', 'Arial', sans-serif; /* Чистый шрифт для чтения */
+    font-family: 'Montserrat', 'Arial', sans-serif; 
 }
 
 /* Флекс-контейнер для строгого порядка кнопок */
@@ -311,10 +267,9 @@
     display: flex;
     justify-content: center;
     gap: 20px;
-    flex-wrap: wrap; /* Для адаптивности на мобильных */
+    flex-wrap: wrap; 
 }
 
-/* Базовый стиль свадебной кнопки */
 .wedding-btn {
     display: inline-flex;
     align-items: center;
@@ -337,7 +292,7 @@
     font-size: 1rem;
 }
 
-/* Дизайн кнопок: Тонкий стиль (Контурные и залитые) */
+/* Дизайн кнопок */
 
 /* 1. Позвонить Вере  */
 .btn-call {
@@ -401,18 +356,17 @@ div[class*="-content"] {
     background-color: transparent !important;
     background: transparent !important;
 }
-/* Элегантный градиентный разделитель */
+/*  разделитель */
 .wedding-divider {
-    border: 0;                  /* Убираем стандартную грубую рамку */
-    height: 1px;                /* Делаем линию очень тонкой и нежной */
-    max-width: 60%;             /* Линия не будет растягиваться на весь экран, а займет аккуратный центр */
-    margin: 40px auto;          /* Делаем красивые отступы сверху и снизу от блоков */
+    border: 0;                  
+    height: 1px;                
+    max-width: 60%;             
+    margin: 40px auto;          
     
-    /* Магия градиента: прозрачный на краях, благородный серо-зеленый в центре */
     background-image: linear-gradient(to right, transparent, rgba(197, 160, 89, 0.6) 50%, rgba(197, 160, 89, 0.6) 30%, transparent); 
 }
 
-/* На мобильных телефонах делаем линию чуть шире, чтобы она смотрелась пропорционально */
+
 @media (max-width: 480px) {
     .wedding-divider {
         max-width: 80%;
@@ -429,7 +383,7 @@ body {
     min-height: 100%;
     font-family: 'Cormorant Garamond', serif;
     
-    /* Наложение полупрозрачного белого цвета и текстуры */
+    
     background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url('bg.jpg');
     
     /* НАСТРОЙКИ ДЛЯ МОБИЛЬНЫХ (работают по умолчанию) */
@@ -444,7 +398,7 @@ body {
         background-size: cover !important; 
         background-repeat: no-repeat !important;
         background-position: center center;
-        background-attachment: fixed; /* возвращаем красивый параллакс для ПК */
+        background-attachment: fixed; 
     }
 }
 </style>
@@ -481,16 +435,21 @@ body {
             <div class="timeline-item"><div class="time">23:00</div><div class="event-desc"><h3>Финал вечера</h3><p>Время сказать друг другу самое важное и сохранить этот вечер в памяти навсегда.</p></div></div>
        </div>
 </section>
-    </section>
 <hr class="wedding-divider">
    <section class="dress-code">
     <h2 class="section-title">Дресс-код</h2>
     
-    <p style="font-size: 18px; color: #666; font-style: italic; margin-bottom: 20px;">
+    <p style="font-family: 'Cormorant Garamond', 'Georgia', serif;
+    margin: 10px auto 0; 
+    color: #888; 
+    font-style: italic; 
+    font-size: clamp(16px, 4vw, 19px); 
+    line-height: 1.5;
+    max-width: 450px; ">
         Будем признательны за поддержку палитры нашей свадьбы:
     </p>
     
-    <!-- БЛОК ПАЛИТРЫ (ТЕПЕРЬ ОН ЗАКРЫВАЕТСЯ СТРОГО ТУТ) -->
+    <!-- БЛОК ПАЛИТРЫ  -->
     <div class="palette" style="margin-bottom: 40px;">
         <div class="color-circle" style="background-color: #AEB28E;"></div>
         <div class="color-circle" style="background-color: #6F7B45;"></div>
@@ -502,11 +461,17 @@ body {
         <div class="color-circle" style="background-color: #8C7A70; border: 1px solid #ddd;"></div>
     </div> <!-- Закрыли палитру -->
 
-    <!-- НОВЫЙ ИЗОЛИРОВАННЫЙ БЛОК (ВНЕ ПАЛИТРЫ) -->
+    
     <div style="display: flex; flex-direction: column; align-items: stretch; max-width: 800px; margin: 0 auto; padding: 20px; box-sizing: border-box; width: 100%;"> 
         
         <!-- ЖЕНСКИЙ БЛОК -->
-        <p style="display: block; width: 100%; margin: 0 0 25px 0; padding: 0; font-size: 18px; line-height: 1.5; color: #666; font-style: italic; text-align: left; font-family: inherit;">
+        <p style="font-family: 'Cormorant Garamond', 'Georgia', serif;
+    margin: 10px auto 0; 
+    color: #888; 
+    font-style: italic; /* Твой любимый изящный курсив */
+    font-size: clamp(16px, 4vw, 19px); /* Идеальный размер, как в пожеланиях */
+    line-height: 1.5;
+    max-width: 450px; ">
             <strong>Для девушек:</strong> Выбирайте коктейльные или вечерние платья, а также брючные костюмы в представленной гамме. Чтобы невеста оставалась уникальной, просим избегать белого и айвори, а также черного и кричащих цветов.
         </p>
 
@@ -516,7 +481,13 @@ body {
         </div>
 
         <!-- МУЖСКОЙ БЛОК -->
-        <p style="display: block; width: 100%; margin: 0; padding: 0; font-size: 18px; line-height: 1.5; color: #666; font-style: italic; text-align: left; font-family: inherit;"> 
+        <p style="font-family: 'Cormorant Garamond', 'Georgia', serif;
+    margin: 10px auto 0; 
+    color: #888; 
+    font-style: italic; /* Твой любимый изящный курсив */
+    font-size: clamp(16px, 4vw, 19px); /* Идеальный размер, как в пожеланиях */
+    line-height: 1.5;
+    max-width: 450px; ">
             <strong>Для мужчин:</strong> Ждем вас в классических образах — костюмах или строгих брюках с рубашкой. Пожалуйста, выбирайте спокойные оттенки, избегая слишком ярких цветов. 
         </p>
 
@@ -565,7 +536,13 @@ body {
     
     <h2 class="section-title" style="margin-bottom: 15px; font-size: 24px;">Анкета гостя</h2>
     
-    <p style="font-size: 16px; color: #666; font-style: italic; margin-bottom: 30px; line-height: 1.5; padding: 0 10px;">
+    <p style="font-family: 'Cormorant Garamond', 'Georgia', serif;
+    margin: 10px auto 0; 
+    color: #888; 
+    font-style: italic; 
+    font-size: clamp(16px, 4vw, 19px); 
+    line-height: 1.5;
+    max-width: 450px; ">
         Пожалуйста, ответьте на несколько вопросов, чтобы мы сделали этот день идеальным для вас. Будем благодарны за ответы до 31 июля!
     </p>
 
@@ -585,11 +562,17 @@ body {
     <div class="wedding-container">
         <h2 class="section-title">СЮРПРИЗЫ</h2>
         
-        <p class="wishes-description">
-            Если у вас есть идея для творческого сюрприза или необычного подарка, свяжитесь, пожалуйста, с нашим организатором Верой, также ей можно адресовать вопросы, которые касаются трансфера и проживания.:
+        <p style="font-family: 'Cormorant Garamond', 'Georgia', serif;
+    margin: 10px auto 0; 
+    color: #888; 
+    font-style: italic; 
+    font-size: clamp(16px, 4vw, 19px); 
+    line-height: 1.5;
+    max-width: 450px; ">
+            Если у вас есть идея для творческого сюрприза или необычного подарка, свяжитесь, пожалуйста, с нашим организатором Верой, также ей можно адресовать вопросы, которые касаются трансфера и проживания:
         </p>
         
-        <!-- Элегантный ряд кнопок -->
+        
         <div class="action-buttons-group">
             
             <!-- 1. Кнопка для звонка -->
@@ -602,7 +585,7 @@ body {
                 <span class="btn-icon">💬</span> Написать в Telegram
             </a>
             
-            <!-- 3. Кнопка для Макса -->
+            <!-- 3. Кнопка для MAX -->
             <a href="https://max.ru/u/f9LHodD0cOIZAJL30CM6VksnYYp-2sihD-ZFuDvvBzWl3hJUUu-ZpZjg6g8" class="wedding-btn btn-max" target="_blank">
                 <span class="btn-icon">🐌</span> Написать в MAX
             </a>
@@ -611,7 +594,6 @@ body {
     </div>
 </section>
 </section>
-
     <script>
         function updateTimer() {
             var weddingDate = new Date(2026, 7, 26, 15, 0, 0).getTime();
