@@ -430,20 +430,16 @@ body {
     overflow: hidden; 
     -webkit-overflow-scrolling: touch;
     
-    /* Эффект матового стекла, чтобы текст формы легко читался на любом фоне */
+    
     background: rgba(255, 255, 255, 0.85); 
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     
-    /* Мягкие скругленные углы и легкая тень для объема */
+   
     border-radius: 16px; 
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.3);
-    
-    /* Внутренние отступы, чтобы форма внутри подложки "дышала" */
-    padding: 15px 10px;
-    box-sizing: border-box;
-}
+  
 .survey-iframe {
     display: block; 
     border: none; 
@@ -459,7 +455,7 @@ body {
     }
     
     .survey-description {
-        padding: 0 15px; /* Возвращаем отступ тексту, чтобы он не упирался в края экрана телефона */
+        padding: 0 15px; 
         box-sizing: border-box;
     }
 }
@@ -603,10 +599,10 @@ body {
 
     <div class="survey-iframe-wrapper">
     
-    <!-- Родной скрипт Яндекса (он должен стоять прямо перед iframe) -->
+    
     <script src="https://yandex.ru"></script>
     
-    <!-- Форма БЕЗ дубликатов и лишних кавычек -->
+   
     <iframe src="https://forms.yandex.ru/u/6a0588ec49af474758154b97?iframe=1" 
             name="ya-form-6a0588ec49af474758154b97" 
             class="survey-iframe" 
