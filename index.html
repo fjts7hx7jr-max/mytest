@@ -429,8 +429,21 @@ body {
     min-height: 650px; 
     overflow: hidden; 
     -webkit-overflow-scrolling: touch;
+    
+    /* Эффект матового стекла, чтобы текст формы легко читался на любом фоне */
+    background: rgba(255, 255, 255, 0.85); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    
+    /* Мягкие скругленные углы и легкая тень для объема */
+    border-radius: 16px; 
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    
+    /* Внутренние отступы, чтобы форма внутри подложки "дышала" */
+    padding: 15px 10px;
+    box-sizing: border-box;
 }
-
 .survey-iframe {
     display: block; 
     border: none; 
