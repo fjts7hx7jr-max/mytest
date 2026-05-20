@@ -588,22 +588,20 @@ body {
         Пожалуйста, ответьте на несколько вопросов, чтобы мы сделали этот день идеальным для вас. Будем благодарны за ответы до 31 июля!
     </p>
 
-    <!-- Обертка для телефонов -->
     <div class="survey-iframe-wrapper">
-        
-        <!-- Родной скрипт Яндекса для авто-высоты -->
-        <script src="https://yandex.ru"></script>
-        
-        <!-- Форма с правильными стилями ширины -->
-        <iframe src="https://yandex.ru" 
-                frameborder="0" 
-                name="ya-form-6a0588ec49af474758154b97" 
-                class="survey-iframe" 
-                height="700">
-        </iframe>
-        
-    </div>
-</section>
+    
+    <!-- Родной скрипт Яндекса (он должен стоять прямо перед iframe) -->
+    <script src="https://yandex.ru"></script>
+    
+    <!-- Форма БЕЗ дубликатов и лишних кавычек -->
+    <iframe src="https://forms.yandex.ru/u/6a0588ec49af474758154b97?iframe=1" 
+            name="ya-form-6a0588ec49af474758154b97" 
+            class="survey-iframe" 
+            frameborder="0" 
+            height="700">
+    </iframe>
+    
+</div>
 <hr class="wedding-divider">
 <section class="gifts-section">
     <div class="wedding-container">
