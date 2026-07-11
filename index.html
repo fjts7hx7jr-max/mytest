@@ -30,13 +30,21 @@
     font-size: clamp(45px, 10vw, 90px); 
     font-weight: normal; 
     margin: 0; 
-    line-height: 1.2; 
+    line-height: 1.0; /* Немного уменьшили, чтобы убрать пустоту между строками */
+    text-align: center;
     
-    /* ЦВЕТ:  */
+    /* ЦВЕТ: */
     color: #e6dfd3; 
     
-    /* ТЕНЬ:  */
+    /* ТЕНЬ: */
     text-shadow: 2px 2px 15px rgba(255, 255, 255, 0.6), 0px 0px 10px rgba(0, 0, 0, 0.15); 
+}
+
+
+    display: inline-block;
+    margin-top: -10px;    
+    margin-bottom: -10px; 
+    font-size: 0.9em;     
 }
         .date { font-size: 24px; letter-spacing: 6px; margin-top: 15px; text-transform: uppercase; }
 
@@ -51,7 +59,64 @@
         .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(26px, 5vw, 36px); color: #2c2c2c; margin-bottom: 60px; text-transform: uppercase; letter-spacing: 6px; display: flex; align-items: center; justify-content: center; gap: 15px; }
         .section-title::before, .section-title::after { content: ''; width: 8px; height: 8px; background: #d2b48c; transform: rotate(45deg); opacity: 0.6; }
 <style>
-  
+  .wedding-calendar-container {
+    max-width: 320px;
+    margin: 40px auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+/* Заголовок месяца (Август 2026) — в стиле твоих заголовков */
+.calendar-month {
+    /* ВРЕМЯ ТАЙМЛАЙН*/
+
+    font-family: 'Cormorant Garamond', 'Georgia', serif;
+    font-size: clamp(28px, 6vw, 36px); 
+    letter-spacing: 2px; 
+    color: #a89177; 
+    text-transform: uppercase; 
+    font-weight: 300; 
+}
+
+/* Сетка календаря (7 колонок на 7 дней недели) */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    row-gap: 15px;
+    column-gap: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+/* Стили для дней недели (Пн, Вт...) */
+.weekday {
+    font-size: 12px;
+    font-weight: 600;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Обычные дни месяца */
+.day {
+    font-size: 16px;
+    color: #444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    width: 36px;
+    margin: 0 auto;
+}
+
+/* МАГИЯ: Тот самый заветный кружочек вокруг 26 числа */
+.wedding-day {
+    color: #2c2c2c; /* Цвет цифры внутри кружка */
+    font-weight: bold;
+    border: 1px solid #2c2c2c; /* Стильная тонкая линия круга */
+    border-radius: 50%; /* Делает рамку идеально круглой */
+    background-color: transparent; /* Оставляем прозрачным или можно задать нежный цвет */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Легкий объем */
+}
  .modern-invite {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     
@@ -228,12 +293,30 @@
 
 /* Заголовок */
 .section-title {
-    font-size: 2.2rem;
-    font-weight: 300;
-    letter-spacing: 4px;
-    margin-bottom: 25px;
-    color: #2c2c2c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px; 
+    margin: 0 auto 40px auto; 
+    text-align: center;
+}
+
+
+.section-title .rhombus {
+    color: #d2b48c; 
+    font-size: 0.8em; 
+    display: inline-block;
+    flex-shrink: 0; 
+}
+
+/* Сам текст заголовка */
+.section-title .title-text {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: clamp(18px, 5vw, 24px); /* Адаптивный размер для телефонов */
+    font-weight: 600;
     text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #333;
 }
 
 /* Описание */
@@ -476,7 +559,11 @@ body {
 </head>
 <body>
     <section class="main-screen" style="padding: 0;">
-<h1 class="names">Сергей<br>&<br>Виктория</h1>
+<h1 class="names">
+    Сергей<br>
+    <span class="amp">&</span><br>
+    Виктория
+</h1>
         <div class="timer-container">
             <div id="timer">
                 <div class="timer-item"><span id="days">00</span><span>дней</span></div>
@@ -492,15 +579,45 @@ body {
 <section style="padding: 60px 0;">
    <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: clamp(26px, 4vw, 24px); font-weight: 300; line-height: 1.8; color: #222222; max-width: 600px; margin: 70px auto; padding: 0 25px; text-transform: uppercase; letter-spacing: 2px; text-align: center;">
     Дорогие родные и друзья! Приглашаем вас разделить с нами особенное событие. 
-    <span style="font-weight: 600; color: #000000; border-bottom: 1px solid #222222; padding-bottom: 2px;">26 августа 2026 года</span> 
-    состоитcя наша свадьба. Будем очень рады, если вы станете частью нашей истории!
+   
+     Будем очень рады, если вы станете частью нашей истории!
+</div>
+<div class="wedding-calendar-container">
+    <!-- Название месяца в твоем фирменном стиле -->
+    <h3 class="calendar-month">26.08.2026</h3>
+    
+    <div class="calendar-grid">
+        <!-- Дни недели -->
+        <div class="weekday">Пн</div>
+        <div class="weekday">Вт</div>
+        <div class="weekday">Ср</div>
+        <div class="weekday">Чт</div>
+        <div class="weekday">Пт</div>
+        <div class="weekday">Сб</div>
+        <div class="weekday">Вс</div>
+        
+        <!-- Пустые ячейки, так как 1 августа 2026 — это суббота -->
+        <div></div><div></div><div></div><div></div><div></div>
+        
+        <!-- Дни месяца -->
+        <div class="day">1</div><div class="day">2</div>
+        <div class="day">3</div><div class="day">4</div><div class="day">5</div><div class="day">6</div><div class="day">7</div><div class="day">8</div><div class="day">9</div>
+        <div class="day">10</div><div class="day">11</div><div class="day">12</div><div class="day">13</div><div class="day">14</div><div class="day">15</div><div class="day">16</div>
+        <div class="day">17</div><div class="day">18</div><div class="day">19</div><div class="day">20</div><div class="day">21</div><div class="day">22</div><div class="day">23</div>
+        <div class="day">24</div><div class="day">25</div>
+        
+        <!-- НАША ДАТА (Обведена в кружок) -->
+        <div class="day wedding-day">26</div>
+        
+        <div class="day">27</div><div class="day">28</div><div class="day">29</div><div class="day">30</div><div class="day">31</div>
+    </div>
 </div>
 </section>
 <hr class="wedding-divider">
     <section class="timeline-section">
         <h2 class="section-title">Программа дня</h2>
         <div class="timeline">
-            <div class="timeline-item"><div class="time">15:00</div><div class="event-desc"><h3>Сбор гостей</h3><p>Приветственные фуршет и начало праздника.</p></div></div>
+            <div class="timeline-item"><div class="time">15:00</div><div class="event-desc"><h3>Сбор гостей</h3><p>Приветственный фуршет и начало праздника.</p></div></div>
             <div class="timeline-item"><div class="time">16:00</div><div class="event-desc"><h3>Свадебный ужин</h3><p>Время вкусной еды, душевных тостов и шумных танцев. Запасайтесь хорошим настроением и сменной обувью.</p></div></div>
             <div class="timeline-item"><div class="time">21:00</div><div class="event-desc"><h3>Свадебный торт</h3><p>Сладкое завершение вечера.</p></div></div>
             <div class="timeline-item"><div class="time">23:00</div><div class="event-desc"><h3>Тёплый финал</h3><p>Время сказать друг другу самое важное и сохранить этот вечер в памяти навсегда.</p></div></div>
@@ -560,7 +677,7 @@ body {
     font-size: clamp(16px, 4vw, 19px); 
     line-height: 1.5;
     max-width: 450px; ">
-            <strong>Для мужчин:</strong> ждем вас в классических образах — костюмах или строгих брюках с рубашкой. Пожалуйста, выбирайте спокойные оттенки, избегая слишком ярких цветов. 
+            <strong>Для мужчин:</strong> ждём вас в классических образах — костюмах или строгих брюках с рубашкой. Пожалуйста, выбирайте спокойные оттенки, избегая слишком ярких цветов. 
         </p>
 
     </div>
@@ -573,7 +690,7 @@ body {
     <div class="location-info" style="margin-bottom: 25px;"> 
 
     <h3 style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; margin: 10px 0 5px; font-size: clamp(14px, 3.5vw, 16px); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: #333; line-height: 1.4;">
-        Ждем вас в ресторане «Кедр»! Событие состоится на летней террасе / в шатре.
+        Ждём вас в ресторане «Кедр»! Событие состоится на летней террасе  в шатре.
     </h3> 
     <p style="font-size: 18px; color: #666; margin: 0;">
 д. Зайцево, ул.Сосновая д3.
@@ -611,7 +728,7 @@ body {
 
             <div class="wish-item">
                 <span class="sub-title">О чувствах</span>
-                <p>Будем очень признательны, если Вы воздержитесь от криков "Горько!". Ведь поцелуй — это знак выражения чувств, и он не может быть по заказу.
+                <p>Будем очень признательны, если вы воздержитесь от криков "Горько!". Ведь поцелуй — это знак выражения чувств, и он не может быть по заказу.
 </p>
             </div>
         </div>
@@ -622,9 +739,8 @@ body {
     <p class="survey-description">
         Пожалуйста, ответьте на несколько вопросов, чтобы мы сделали этот день идеальным для вас. Будем благодарны за ответы до 26 июля!
     </p>
-
    <div class="survey-btn-wrapper">
-        <a href="https://forms.yandex.ru/cloud/6a0da47b4936395dd03432cd/" target="_blank" class="wedding-survey-btn">
+        <a href="https://forms.yandex.ru/u/6a527603068ff0badec4acef"  target="_blank"  class="wedding-survey-btn">
             Заполнить анкету
         </a>
     </div>
@@ -634,37 +750,36 @@ body {
     <div class="wedding-container">
         <h2 class="section-title">СЮРПРИЗЫ</h2>
         
-        <p style="font-family: 'Cormorant Garamond', 'Georgia', serif;
-    margin: 10px auto 0; 
-    color: #888; 
-    font-style: italic; 
-    font-size: clamp(16px, 4vw, 19px); 
-    line-height: 1.5;
-    max-width: 450px; ">
-            Если у вас есть идея для творческого сюрприза или необычного подарка, свяжитесь, пожалуйста, с нашим организатором Верой.
-        </p>
-        
-        
-        <div class="action-buttons-group">
-            
-            <!-- 1. Кнопка для звонка -->
-            <a href="tel:+79200966068" class="wedding-btn btn-call">
-                <span class="btn-icon">📞</span> Позвонить Вере
-            </a>
-            
-            <!-- 2. Telegram Веры -->
-            <a href="https://t.me/saltwedding" class="wedding-btn btn-vera" target="_blank">
-                <span class="btn-icon">💬</span> Написать в Telegram
-            </a>
-            
-            <!-- 3. Кнопка для MAX -->
-            <a href="https://max.ru/u/f9LHodD0cOIZAJL30CM6VksnYYp-2sihD-ZFuDvvBzWl3hJUUu-ZpZjg6g8" class="wedding-btn btn-max" target="_blank">
-                <span class="btn-icon">🐌</span> Написать в MAX
-            </a>
-            
-        </div>
-    </div>
-</section>
+<!-- ИЗМЕНЕНО: margin: 10px auto 0; заменено на margin: 10px auto 40px; -->
+<p style="font-family: 'Cormorant Garamond', 'Georgia', serif;
+margin: 10px auto 40px; 
+color: #888; 
+font-style: italic; 
+font-size: clamp(16px, 4vw, 19px); 
+line-height: 1.5;
+max-width: 450px; ">
+    Если у вас есть идея для творческого сюрприза или необычного подарка, свяжитесь, пожалуйста, с нашим организатором Верой.
+</p>
+
+
+<div class="action-buttons-group">
+    
+    <!-- 1. Кнопка для звонка -->
+    <a href="tel:+79200966068" class="wedding-btn btn-call">
+        <span class="btn-icon">📞</span> Позвонить Вере
+    </a>
+    
+    <!-- 2. Telegram Веры -->
+    <a href="https://t.me/saltwedding" class="wedding-btn btn-vera" target="_blank">
+        <span class="btn-icon">💬</span> Написать в Telegram
+    </a>
+    
+    <!-- 3. Кнопка для MAX -->
+    <a href="https://max.ru/u/f9LHodD0cOIZAJL30CM6VksnYYp-2sihD-ZFuDvvBzWl3hJUUu-ZpZjg6g8" class="wedding-btn btn-max" target="_blank">
+        <span class="btn-icon">🐌</span> Написать в MAX
+    </a>
+    
+</div>
 </section>
     <script>
         function updateTimer() {
@@ -680,3 +795,4 @@ body {
         setInterval(updateTimer, 1000);
         updateTimer();
     </script>
+    
